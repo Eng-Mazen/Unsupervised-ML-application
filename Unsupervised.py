@@ -39,21 +39,6 @@ while True:
     except ValueError as e:
         print(f"There was an issue: {e}. Please try again.")
         continue
-
-    # Finally block for displaying data
-    finally:
-        while True:
-            choice = input('Want to see the data you entered? (Yes/No):\n').strip().capitalize()
-            if choice == 'Yes':
-                print('The unlabeled data is:\n', X)
-                print('Program will continue executing...')
-                break
-            elif choice == 'No':
-                print('Program will continue executing...')
-                break
-            else:
-                print('Choice not understood. Please enter Yes or No.')
-
     # KMeans Clustering
     no_clusters = int(input("Enter the number of clusters you want to use in the program:\n"))
 
@@ -110,5 +95,6 @@ while True:
     restart_choice = input('Do you want to start again from the beginning? (Yes/No):\n').strip().lower()
     if restart_choice != 'yes':
         break
+
 
 print('Program has ended.')

@@ -8,12 +8,12 @@ import matplotlib.pyplot as plt
 while True:
     try:
         # First: Import the data file location
-        print('This program accepts only Excel, text, and MATLAB files.')
+        print('This program accepts only Excel, csv, and MATLAB files.')
         file_type = input('Enter the type of file (Excel, text, or MATLAB):\n').strip().lower()
 
         # 1- Text files:
         if file_type == 'text':
-            print('The text file type was chosen.')
+            print('The csv file type was chosen.')
             path = input("Enter the absolute path of the file (Ctrl+Shift+C to copy path):\n")
             data = read_csv(rf'{path[1 : len(path) - 1]}')
             X = np.array(data)
@@ -98,3 +98,4 @@ while True:
 
 
 print('Program has ended.')
+
